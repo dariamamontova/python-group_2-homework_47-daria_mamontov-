@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="string-1">Ядра в вёдра, выдру в тундру!</div>
+    <div id="string-2">Выдрав с выдры в тундре гетры</div>
+    <div id="string-3">В недрах тундры, выдры в гетрах </div>
+    <div id="string-4">Вытру гетрой выдре морду </div>
+    <div id="string-5">Тырят в вёдра ядра кедров!</div>
+    <div id="string-6">Вытру выдрой ядра кедров</div>
+
+
+    <div class="element">Element 1</div>
+    <div class="element">Element 2</div>
+    <div class="element">Element 3</div>
+    <div class="element">Element 4</div>
+    <div class="element">Element 5</div>
+    <div class="element">Element 6</div>
+
+    <div id="container"></div>
+
+    <div id="container-button"></div>
+    <input id="add-item-btn" type="button" value="+">
+
+
+    <script type="application/javascript">
+        // Задание 1
+        let firstString = document.getElementById("string-3");
+        console.log(firstString.textContent);
+        let secondString = document.getElementById("string-5");
+        console.log(secondString.textContent);
+        let thirdString = document.getElementById("string-2");
+        console.log(thirdString.textContent);
+        let fourthString= document.getElementById("string-6");
+        console.log(fourthString.textContent);
+        let fifthString = document.getElementById("string-4");
+        console.log(fifthString.textContent);
+        let sixthString = document.getElementById("string-1");
+        console.log(sixthString.textContent);
+    </script>
+
+    <script type="application/javascript">
+        // Задание 2
+        let firstElem = document.getElementsByClassName('element')[0];
+        let secondElem = document.getElementsByClassName('element')[1];
+        let thirdElem = document.getElementsByClassName('element')[2];
+        firstElem.style.color = 'red';
+        secondElem.style.color = 'red';
+        thirdElem.style.color = 'red';
+        let fourthElem = document.getElementsByClassName('element')[3];
+        let fifthElem = document.getElementsByClassName('element')[4];
+        let sixthElem = document.getElementsByClassName('element')[5];
+        fourthElem.style.color = 'green';
+        fifthElem.style.color = 'green';
+        sixthElem.style.color = 'green';
+    </script>
+
+    <script type="application/javascript">
+        //Задание 3
+        let container = document.getElementById('container');
+        for(let i = 1; i < 6; i++) {
+            let divElem = document.createElement('div');
+            divElem.innerHTML = 'Element ' + [i];
+            divElem.classList.add('element');
+            container.appendChild(divElem);
+        }
+        console.log(container);
+
+    </script>
+
+    <script type="application/javascript">
+        //Задание 4
+        let button = document.getElementById('add-item-btn');
+        button.onclick = function() {
+            let container = document.getElementById('container-button');
+            let divElem = document.createElement('div');
+            divElem.innerHTML = 'Element';
+            divElem.classList.add('element');
+            container.appendChild(divElem);
+        };
+    </script>
+
+</body>
+</html>
